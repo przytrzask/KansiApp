@@ -1,72 +1,49 @@
 <div class="controller" ng-controller="usersController">
     <section>
-    <md-subheader md-theme="default">
-        Post Details
-
-    </md-subheader>
-
-
-    <div ng-show="isLoading" layout="row" layout-sm="column" layout-align="space-around">
-        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
-    </div>
-
-    <div class="togglevisibility" ng-hide="hideOrShow">
-    
-        <div layout="column" layout-align="center stretch" flex="80" flex-offset="10">
-        <div md-whiteframe="3">
-        <md-list>
-            <md-list-item class="md-3-line md-long-text" >
-                <div class="md-list-item-text">
-                    <h3>{{path[2]}}</h3>
-                    <p>{{path[3]}}</p>
-                    <p>UserId:<cite> {{path[0]}}</cite> ID:<cite>{{path[1]}}</cite></p>
-
+        <md-subheader md-theme="default">
+            Post Details
+        </md-subheader>
+        <div ng-show="isLoading" layout="row" layout-sm="column" layout-align="space-around">
+            <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+        </div>
+        <div class="togglevisibility" ng-hide="hideOrShow">
+            <div layout="column" layout-align="center stretch" flex="80" flex-offset="10">
+                <div md-whiteframe="3">
+                    <md-list>
+                        <md-list-item class="md-3-line md-long-text">
+                            <div class="md-list-item-text">
+                                <h3>{{path[2]}}</h3>
+                                <p>{{path[3]}}</p>
+                                <p>UserId:<cite> {{path[0]}}</cite> ID:<cite>{{path[1]}}</cite></p>
+                            </div>
+                        </md-list-item>
+                    </md-list>
                 </div>
-
-
-                
-            </md-list-item>
-        </md-list>
-        </div>
-        </div>
+            </div>
     </section>
     <section>
         <md-subheader md-theme="default">Comments:</md-subheader>
-<div layout="column" layout-align="center stretch" flex="80" flex-offset="10">
-        <div md-whiteframe="3">
-            <md-list>
-                <md-list-item class="md-3-line md-long-text" ng-repeat="data in mydata" ng-click="">
-
-                    <div class="md-list-item-text">
-
-                        <h3>{{ data.name }}</h3>
-                        <p>{{ data.body}}</p>
-                        <p>{{data.email}}</p>
-                        <md-divider></md-divider>
-                    </div>
-
-
-                    <!--{{data.contributions}}-->
-
-                    
-                </md-list-item>
-                <md-list-item class="md-3-line md-long-text" ng-repeat="data in mydata" ng-click="">
-
-                    <div class="md-list-item-text">
-
-                        <h3>{{ data.name }}</h3>
-                        <p>{{ data.body}}</p>
-                        <p>{{data.email}}</p>
-                        <md-divider></md-divider>
-                    </div>
-
-
-                    <!--{{data.contributions}}-->
-
-                    
-                </md-list-item>
-            </md-list>
-</div>
+        <div layout="column" layout-align="center stretch" flex="80" flex-offset="10">
+            <div md-whiteframe="3">
+                <md-list>
+                    <md-list-item class="md-3-line md-long-text" ng-repeat="data in mydata" ng-click="">
+                        <div class="md-list-item-text">
+                            <h3>{{ data.name }}</h3>
+                            <p>{{ data.body}}</p>
+                            <p>{{data.email}}</p>
+                            <md-divider></md-divider>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-3-line md-long-text" ng-repeat="data in mydata" ng-click="">
+                        <div class="md-list-item-text">
+                            <h3>{{ data.name }}</h3>
+                            <p>{{ data.body}}</p>
+                            <p>{{data.email}}</p>
+                            <md-divider></md-divider>
+                        </div>
+                    </md-list-item>
+                </md-list>
+            </div>
         </div>
     </section>
     </div>
