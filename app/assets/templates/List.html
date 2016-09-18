@@ -1,0 +1,34 @@
+
+<div ng-controller='ListController' class="listdemoListControls">
+    <md-subheader md-theme="default">
+        Posts List <input type="text" ng-model="search.title" ng-minlength=3 flex-offset="10" class="form-control" placeholder="Search">
+        <a href="#addPost">
+            <md-button class="md-raised md-primary" flex-offset="45">Add Post</md-button>
+        </a>
+    </md-subheader>
+    <div ng-show="isLoading" layout="column" layout-sm="column" layout-align="space-around center">
+        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+    </div>
+    <div layout="column" layout-align="center stretch" flex="80" flex-xs="100" flex-offset="10">
+        <div md-whiteframe="3" flex="100">
+            <div class="togglevisibility" ng-hide="hideOrShow">
+                <md-list>
+                    <md-list-item class="md-2-line md-long-text" ng-repeat="data in mydata|filter:search|offset:(currentPage-1)*itemsPerPage|limitTo: itemsPerPage"
+                        ng-click="">
+                        <div class="md-list-item-text">
+                            <a href="#comments">
+                                <h3 ng-click="setSelectedUrl(data.userId,data.id,data.title,data.body)">{{ data.title }}</h3>
+                            </a>
+                            <p>{{ data.body| limitTo:characterLimit }}...</p>
+                            <md-divider></md-divider>
+                        </div>
+                    </md-list-item>
+                </md-list>
+            </div>
+        </div>
+        <div ng-show="mydata.length" " md-padding layout="row " layout-padding layout-align="center center " ng-hide="hideOrShow ">
+        <cl-paging flex cl-pages="total "  cl-steps="5 " cl-page-changed="paging.onPageChanged() " cl-align="center center
+            " cl-current-page="paging.current "></cl-paging>
+    </div>
+    </div>
+</div>

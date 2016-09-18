@@ -1,0 +1,35 @@
+
+  <md-subheader md-theme="default"  class="md-no-sticky part">
+    Add Post
+  </md-subheader>
+  
+<div ng-controller="addPostController" layout="column" layout-align="center stretch" flex="80" flex-offset="10">
+  <div class="frame" md-whiteframe="3">
+    <div class="miniToolbar">
+      
+    </div>
+<form  name="postForm" ng-submit="postForm.$valid && submit()" novalidate>
+
+  <div ng-show="isLoading" layout="row" layout-sm="column" layout-align="space-around">
+        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+    </div>
+    <div ng-hide="hideOrShow"  layout="column" layout-align="center stretch">
+          <md-input-container layout="row" layout-align="space-between stretch">
+            <label>Tile</label>
+            <input name="Write a title" ng-model="data.title" required>
+          </md-input-container>
+
+          <md-input-container>
+            <label>Body</label>
+            <textarea rows="3" ng-model="data.body" required></textarea>
+          </md-input-container>
+          
+        </div>
+        <md-button ng-hide="hideOrShow" ng-disabled="!postForm.$valid" type="submit" class="md-raised md-primary">Submit</md-button>
+       <p ng-show="message.length"> Status: {{message}} </p>
+        </div>
+</form>
+</div>
+
+            
+

@@ -1,0 +1,32 @@
+{
+  "name": "KansiApp",
+  "version": "1.0.0",
+  "description": "showcase page",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log('test');"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "trzasQ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/przytrzask/portfel/issues"
+  },
+  "homepage": "https://github.com/przytrzask/portfel#readme",
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-aria": "^1.5.8",
+    "angular-material": "^1.1.0",
+    "angular-route": "^1.5.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^2.3.2"
+  },
+  "dependencies": {
+    "gulp-haml": "^0.1.6"
+  }
+}

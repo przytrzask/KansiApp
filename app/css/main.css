@@ -1,0 +1,48 @@
+a {
+  text-decoration: none; }
+
+.md-subheader-inner {
+  background-color: #3f51b5; }
+
+.miniToolbar {
+  height: 30px;
+  background-color: #3f51b5; }
+
+.frame {
+  top: -100px;
+  background-color: white;
+  position: relative; }
+
+.md-subheader.part {
+  height: 200px;
+  background-color: #C5CAE9; }
+
+.md-subheader.indigo {
+  background-color: #3f51b5; }
+
+md-list {
+  padding: 0; }
+
+._md-nav-bar-list {
+  background-color: #3F51B5; }
+
+.md-subheader {
+  background-color: #C5CAE9; }
+
+.md-subheader-inner {
+  background-color: #C5CAE9; }
+
+
+
+.md-headline {
+  font-size: 12px; }
+
+
+.justify {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
